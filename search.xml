@@ -1,72 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title></title>
-      <link href="/2018/10/01/linux%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4/"/>
-      <url>/2018/10/01/linux%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2018/09/27/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2018/09/27/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="git学习笔记"><a href="#git学习笔记" class="headerlink" title="git学习笔记"></a>git学习笔记</h1><p>标签（空格分隔）： git</p><hr><p>[TOC]</p><hr><p><strong>1.   创建版本库</strong></p><p>1.1 创建空目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir &lt;目录名&gt;</span><br></pre></td></tr></table></figure></p><p>1.2 创建仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gti init</span><br></pre></td></tr></table></figure></p><p>1.3 将文件添加到版本库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;filename&gt;</span><br></pre></td></tr></table></figure></p><p>1.4 将文件提交到仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure></p><hr><p><strong>2.   版本回退及修改管理</strong></p><p>2.1 查看仓库当前状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></p><p>2.2 查看文件修改内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure></p><p>2.3 查看提交历史<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log --pretty=oneline  //减少输出过多的信息</span><br></pre></td></tr></table></figure></p><p>2.4 查看命令历史<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git relog</span><br></pre></td></tr></table></figure></p><p>2.5 回退版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard &lt;commit ID&gt;</span><br><span class="line">git reset --hard HEAD^  //回退到上个版本</span><br><span class="line">git reset --hard HEAD~100   //回退到100个版本之前</span><br></pre></td></tr></table></figure></p><p>2.6 查看工作区于版本库文件差别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff HEAD -- &lt;filename&gt;</span><br></pre></td></tr></table></figure></p><p>2.7 撤销修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;filename&gt;  //丢弃工作区的修改</span><br><span class="line">git reset HEAD &lt;filename&gt;   //把暂存区的修改丢弃，回退到工作区版本</span><br></pre></td></tr></table></figure></p><p>2.8 删除文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm &lt;filename&gt;   //从工作区中删除文件</span><br><span class="line">git rm &lt;filename&gt;   //从版本库中删除文件,删除后还需要git commit -m &quot;&quot;</span><br></pre></td></tr></table></figure></p><p><strong>3.远程仓库</strong><br>3.1 创建SSH Key<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br><span class="line">cat ~/.ssh/id_rsa.pub   //打开公开密钥</span><br></pre></td></tr></table></figure></p><p>3.2 添加远程库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:your_github_name/your_repository_name.git  //把本地库与GitHub库关联</span><br><span class="line">git push -u origin master   //将本地库推送至远程--第一次</span><br><span class="line">git push origin master   //之后的每次推送</span><br></pre></td></tr></table></figure></p><p>3.3 从远程库克隆<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:your_github_name/your_repository_name.git</span><br></pre></td></tr></table></figure></p><p><strong>4.分支管理</strong><br>4.1 创建及合并分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;name&gt;    //创建并切换到新分支</span><br><span class="line">git branch &lt;name&gt;   //创建新分支</span><br><span class="line">git checkout &lt;name&gt;    //切换至分支</span><br><span class="line">git branch    //查看当前分支</span><br><span class="line">git merge &lt;name&gt;    //合并指定分支到当前分支</span><br><span class="line">git branch -d &lt;name&gt;    //删除分支</span><br><span class="line">git branch -D &lt;name&gt;    //强行删除一个未合并的分支</span><br><span class="line">git merge --no-ff -m &quot;merge with no-ff&quot; name    //禁用快速模式合并并commit</span><br></pre></td></tr></table></figure></p><p>4.2 多人协作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote  //查看远程库的信息</span><br><span class="line">git remote -v   //显示更详细信息</span><br><span class="line">git push origin name    //  推送其他分支</span><br><span class="line">git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt; //创建本地分支和远程分支链接关系</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p><p><strong>5.标签管理</strong><br>5.1 为commit创建标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;name&gt;  //创建标签</span><br><span class="line">git tag     //查看标签</span><br><span class="line">git tag &lt;name&gt; commit_id</span><br><span class="line">git show &lt;tagname&gt;      //查看标签具体信息</span><br></pre></td></tr></table></figure></p><p>5.2 管理标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git tag -d &lt;tagname&gt;   //删除标签</span><br><span class="line">git push origin &lt;tagname&gt;   //推送标签至远程</span><br><span class="line">git push origin --tags      //一次性推送所有标签</span><br><span class="line">git push origin :refs/tags/&lt;tagname&gt;    //删除一个远程标签</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2018/09/27/QT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2018/09/27/QT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="QT学习笔记"><a href="#QT学习笔记" class="headerlink" title="QT学习笔记"></a>QT学习笔记</h1><p>标签（空格分隔）： C/C++</p><hr><h2 id="一、QT简介"><a href="#一、QT简介" class="headerlink" title="一、QT简介"></a>一、QT简介</h2><p>Qt 是一个著名的 C++ 应用程序框架。你并不能说它只是一个 GUI 库，因为 Qt 十分庞大，并不仅仅是 GUI 组件。使用 Qt，在一定程度上你获得的是一个“一站式”的解决方案：不再需要研究 STL，不再需要 C++ 的<string>，不再需要到处去找解析 XML、连接数据库、访问网络的各种第三方库，因为Qt自己内置了这些技术。</string></p><h2 id="二、QT基本模块"><a href="#二、QT基本模块" class="headerlink" title="二、QT基本模块"></a>二、QT基本模块</h2><p>模块分为 Essentials Modules 和 Add-on Modules 两部分。前者是基础模块，在所有平台上都可用；后者是扩展模块，建立在基础模块的基础之上，在能够运行 Qt 的平台之上可以酌情引入。</p><h3 id="1-Qt-基础模块："><a href="#1-Qt-基础模块：" class="headerlink" title="1. Qt 基础模块："></a>1. Qt 基础模块：</h3><ul><li><strong>Qt Core</strong>：提供核心的非GUI功能，所有模块都需要这个模块。这个模块的类包括了动画框架、定时器、各个容器类、时间日期类、事件、IO、JSON、插件机制、智能指针、图形（矩形、路径等）、线程、XML 等。所有这些类都可以通过 <qtcore> 头文件引入。</qtcore></li><li><strong>Qt Gui</strong>：提供 GUI 程序的基本功能，包括与窗口系统的集成、事件处理、OpenGL 和 OpenGL ES 集成、2D 图像、字体、拖放等。这些类一般由 Qt 用户界面类内部使用，当然也可以用于访问底层的 OpenGL ES 图像 API。Qt Gui 模块提供的是所有图形用户界面程序都需要的通用功能。</li><li><strong>Qt Multimedia</strong>：提供视频、音频、收音机以及摄像头等功能。这些类可以通过 <qtmultimedia> 引入，而且需要在 pro 文件中添加 QT += multimedia。</qtmultimedia></li><li><strong>Qt Network</strong>：提供跨平台的网络功能。这些类可以通过 <qtnetwork> 引入，而且需要在 pro 文件中添加 QT += network。</qtnetwork></li><li><strong>Qt Qml</strong>：提供供 QML（一种脚本语言，也提供 JavaScript 的交互机制） 使用的 C++ API。这些类可以通过 <qtqml> 引入，而且需要在 pro 文件中添加 QT += qml。</qtqml></li><li><strong>Qt Quick</strong>：允许在 Qt/C++ 程序中嵌入 Qt Quick（一种基于 Qt 的高度动画的用户界面，适合于移动平台开发）。这些类可以通过 <qtquick> 引入，而且需要在 pro 文件中添加 QT += quick。</qtquick></li><li><strong>Qt SQL</strong>：允许使用 SQL 访问数据库。这些类可以通过 <qtsql> 引入，而且需要在 pro 文件中添加 QT += sql。</qtsql></li><li><strong>Qt Test</strong>：提供 Qt 程序的单元测试功能。这些类可以通过 <qttest> 引入，而且需要在 pro 文件中添加 QT += testlib。</qttest></li><li><strong>Qt Webkit</strong>：基于 WebKit2 的实现以及一套全新的 QML API（顺便说一下，Qt 4.8 附带的是 QtWebkit 2.2）。</li></ul><h3 id="2-Qt-扩展模块："><a href="#2-Qt-扩展模块：" class="headerlink" title="2. Qt 扩展模块："></a>2. Qt 扩展模块：</h3><ul><li><strong>Qt Widgets</strong>：使用 C++ 扩展的 Qt Gui 模块，提供了一些界面组件，比如按钮、单选框等。</li><li><strong>Qt XML</strong>：SAX 和 DOM 的 C++ 实现。该模块已经废除，请使用 QXmlStreamReader/Writer。</li><li><strong>Qt Location</strong>：提供定位机制、地图和导航技术、位置搜索等功能的 QML 和 C++ API。</li><li><strong>Qt Bluetooth</strong>：提供用于访问蓝牙无线设备的 C++ 和 QML API。、</li><li><strong>Qt 3D</strong>：提供声明式语法，在 Qt 程序中可以简单地嵌入 3D 图像。Qt 3D 为 Qt Quick 添加了 3D 内容渲染。Qt 3D 提供了 QML 和 C++ 两套 API，用于开发 3D 程序。</li><li><strong>Qt OpenGL</strong>：方便在 Qt 应用程序中使用 OpenGL。该模块仅仅为了程序从 Qt 4 移植到 Qt 5 的方便才保留下来，如果你需要在新的 Qt 5 程序中使用 OpenGL 相关技术，需要使用的是 QtGui 模块中的 QOpenGL。</li><li><strong>Qt Organizer</strong>：使用 QML 和 C++ API 访问组织事件（organizer event）。organizer API 是 Personal Information Management API 的一部分，用于访问 Calendar 信息。通过 Organizer API 可以实现：从日历数据库访问日历时间、导入 iCalendar 事件或者将自己的事件导出到 iCalendar。</li><li><strong>Qt Service Framework</strong>：提供客户端发现其他设备的服务。Qt Service Framework 为在不同平台上发现、实现和访问服务定义了一套统一的机制。</li><li><strong>Qt Tools</strong>：提供了 Qt 开发的方便工具，包括 Qt CLucene、Qt Designer、Qt Help 以及 Qt UI Tools 。</li><li><strong>Qt System Info</strong>：提供一套 API，用于发现系统相关的信息，比如电池使用量、锁屏、硬件特性等。</li></ul>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2018/09/25/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2018/09/25/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2018/09/25/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2018/09/25/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F10%2F01%2Flinux%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F09%2F27%2Fgit%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[git学习笔记标签（空格分隔）： git [TOC] 1. 创建版本库 1.1 创建空目录1mkdir &lt;目录名&gt; 1.2 创建仓库1gti init 1.3 将文件添加到版本库1git add &lt;filename&gt; 1.4 将文件提交到仓库1git commit -m &quot;提交说明&quot; 2. 版本回退及修改管理 2.1 查看仓库当前状态1git status 2.2 查看文件修改内容1git diff 2.3 查看提交历史12git loggit log --pretty=oneline //减少输出过多的信息 2.4 查看命令历史1git relog 2.5 回退版本123git reset --hard &lt;commit ID&gt;git reset --hard HEAD^ //回退到上个版本git reset --hard HEAD~100 //回退到100个版本之前 2.6 查看工作区于版本库文件差别1git diff HEAD -- &lt;filename&gt; 2.7 撤销修改12git checkout -- &lt;filename&gt; //丢弃工作区的修改git reset HEAD &lt;filename&gt; //把暂存区的修改丢弃，回退到工作区版本 2.8 删除文件12rm &lt;filename&gt; //从工作区中删除文件git rm &lt;filename&gt; //从版本库中删除文件,删除后还需要git commit -m &quot;&quot; 3.远程仓库3.1 创建SSH Key12ssh-keygen -t rsa -C &quot;youremail@example.com&quot;cat ~/.ssh/id_rsa.pub //打开公开密钥 3.2 添加远程库123git remote add origin git@github.com:your_github_name/your_repository_name.git //把本地库与GitHub库关联git push -u origin master //将本地库推送至远程--第一次git push origin master //之后的每次推送 3.3 从远程库克隆1git clone git@github.com:your_github_name/your_repository_name.git 4.分支管理4.1 创建及合并分支12345678git checkout -b &lt;name&gt; //创建并切换到新分支git branch &lt;name&gt; //创建新分支git checkout &lt;name&gt; //切换至分支git branch //查看当前分支git merge &lt;name&gt; //合并指定分支到当前分支git branch -d &lt;name&gt; //删除分支git branch -D &lt;name&gt; //强行删除一个未合并的分支git merge --no-ff -m &quot;merge with no-ff&quot; name //禁用快速模式合并并commit 4.2 多人协作12345git remote //查看远程库的信息git remote -v //显示更详细信息git push origin name // 推送其他分支git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt; //创建本地分支和远程分支链接关系git pull 5.标签管理5.1 为commit创建标签1234git tag &lt;name&gt; //创建标签git tag //查看标签git tag &lt;name&gt; commit_idgit show &lt;tagname&gt; //查看标签具体信息 5.2 管理标签1234git tag -d &lt;tagname&gt; //删除标签git push origin &lt;tagname&gt; //推送标签至远程git push origin --tags //一次性推送所有标签git push origin :refs/tags/&lt;tagname&gt; //删除一个远程标签]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F09%2F27%2FQT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[QT学习笔记标签（空格分隔）： C/C++ 一、QT简介Qt 是一个著名的 C++ 应用程序框架。你并不能说它只是一个 GUI 库，因为 Qt 十分庞大，并不仅仅是 GUI 组件。使用 Qt，在一定程度上你获得的是一个“一站式”的解决方案：不再需要研究 STL，不再需要 C++ 的，不再需要到处去找解析 XML、连接数据库、访问网络的各种第三方库，因为Qt自己内置了这些技术。 二、QT基本模块模块分为 Essentials Modules 和 Add-on Modules 两部分。前者是基础模块，在所有平台上都可用；后者是扩展模块，建立在基础模块的基础之上，在能够运行 Qt 的平台之上可以酌情引入。 1. Qt 基础模块： Qt Core：提供核心的非GUI功能，所有模块都需要这个模块。这个模块的类包括了动画框架、定时器、各个容器类、时间日期类、事件、IO、JSON、插件机制、智能指针、图形（矩形、路径等）、线程、XML 等。所有这些类都可以通过 头文件引入。 Qt Gui：提供 GUI 程序的基本功能，包括与窗口系统的集成、事件处理、OpenGL 和 OpenGL ES 集成、2D 图像、字体、拖放等。这些类一般由 Qt 用户界面类内部使用，当然也可以用于访问底层的 OpenGL ES 图像 API。Qt Gui 模块提供的是所有图形用户界面程序都需要的通用功能。 Qt Multimedia：提供视频、音频、收音机以及摄像头等功能。这些类可以通过 引入，而且需要在 pro 文件中添加 QT += multimedia。 Qt Network：提供跨平台的网络功能。这些类可以通过 引入，而且需要在 pro 文件中添加 QT += network。 Qt Qml：提供供 QML（一种脚本语言，也提供 JavaScript 的交互机制） 使用的 C++ API。这些类可以通过 引入，而且需要在 pro 文件中添加 QT += qml。 Qt Quick：允许在 Qt/C++ 程序中嵌入 Qt Quick（一种基于 Qt 的高度动画的用户界面，适合于移动平台开发）。这些类可以通过 引入，而且需要在 pro 文件中添加 QT += quick。 Qt SQL：允许使用 SQL 访问数据库。这些类可以通过 引入，而且需要在 pro 文件中添加 QT += sql。 Qt Test：提供 Qt 程序的单元测试功能。这些类可以通过 引入，而且需要在 pro 文件中添加 QT += testlib。 Qt Webkit：基于 WebKit2 的实现以及一套全新的 QML API（顺便说一下，Qt 4.8 附带的是 QtWebkit 2.2）。 2. Qt 扩展模块： Qt Widgets：使用 C++ 扩展的 Qt Gui 模块，提供了一些界面组件，比如按钮、单选框等。 Qt XML：SAX 和 DOM 的 C++ 实现。该模块已经废除，请使用 QXmlStreamReader/Writer。 Qt Location：提供定位机制、地图和导航技术、位置搜索等功能的 QML 和 C++ API。 Qt Bluetooth：提供用于访问蓝牙无线设备的 C++ 和 QML API。、 Qt 3D：提供声明式语法，在 Qt 程序中可以简单地嵌入 3D 图像。Qt 3D 为 Qt Quick 添加了 3D 内容渲染。Qt 3D 提供了 QML 和 C++ 两套 API，用于开发 3D 程序。 Qt OpenGL：方便在 Qt 应用程序中使用 OpenGL。该模块仅仅为了程序从 Qt 4 移植到 Qt 5 的方便才保留下来，如果你需要在新的 Qt 5 程序中使用 OpenGL 相关技术，需要使用的是 QtGui 模块中的 QOpenGL。 Qt Organizer：使用 QML 和 C++ API 访问组织事件（organizer event）。organizer API 是 Personal Information Management API 的一部分，用于访问 Calendar 信息。通过 Organizer API 可以实现：从日历数据库访问日历时间、导入 iCalendar 事件或者将自己的事件导出到 iCalendar。 Qt Service Framework：提供客户端发现其他设备的服务。Qt Service Framework 为在不同平台上发现、实现和访问服务定义了一套统一的机制。 Qt Tools：提供了 Qt 开发的方便工具，包括 Qt CLucene、Qt Designer、Qt Help 以及 Qt UI Tools 。 Qt System Info：提供一套 API，用于发现系统相关的信息，比如电池使用量、锁屏、硬件特性等。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F09%2F25%2FC%2B%2B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F09%2F25%2FPython%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
 </search>

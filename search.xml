@@ -26,6 +26,21 @@
     <content type="text"></content>
   </entry>
   <entry>
+    <title><![CDATA[About]]></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Schedule]]></title>
+    <url>%2Fschedule%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Tags]]></title>
     <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>

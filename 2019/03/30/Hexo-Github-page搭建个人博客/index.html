@@ -95,14 +95,14 @@
 
 
   <meta name="description" content="之前看到很多人搭建自己的博客，而不是依托于CSDN、博客园等站点，因此课后之余，花了点时间搭建了本博客，期间遇到了很多问题，现在再此写下了具体的搭建过程以及遇到的麻烦和具体的解决办法，希望对读者有所帮助。 1、Hexo1.1 Hexo简介Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1.2 安装前">
-<meta name="keywords" content="-Hexo -Github page">
+<meta name="keywords" content="Hexo,Github page">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+Github Page搭建个人博客">
 <meta property="og:url" content="http://Unil1.github.io/2019/03/30/Hexo-Github-page搭建个人博客/index.html">
 <meta property="og:site_name" content="Unil&#39;s Blog">
 <meta property="og:description" content="之前看到很多人搭建自己的博客，而不是依托于CSDN、博客园等站点，因此课后之余，花了点时间搭建了本博客，期间遇到了很多问题，现在再此写下了具体的搭建过程以及遇到的麻烦和具体的解决办法，希望对读者有所帮助。 1、Hexo1.1 Hexo简介Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1.2 安装前">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-30T12:13:49.192Z">
+<meta property="og:updated_time" content="2019-03-30T12:58:13.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github Page搭建个人博客">
 <meta name="twitter:description" content="之前看到很多人搭建自己的博客，而不是依托于CSDN、博客园等站点，因此课后之余，花了点时间搭建了本博客，期间遇到了很多问题，现在再此写下了具体的搭建过程以及遇到的麻烦和具体的解决办法，希望对读者有所帮助。 1、Hexo1.1 Hexo简介Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1.2 安装前">
@@ -417,7 +417,7 @@
                 
               
 
-              <time title="创建时间：2019-03-30 18:53:41 / 修改时间：20:13:49" itemprop="dateCreated datePublished" datetime="2019-03-30T18:53:41+08:00">2019-03-30</time>
+              <time title="创建时间：2019-03-30 18:53:41 / 修改时间：20:58:13" itemprop="dateCreated datePublished" datetime="2019-03-30T18:53:41+08:00">2019-03-30</time>
             
 
             
@@ -476,7 +476,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.2k</span>
+                <span title="本文字数">2.3k</span>
               
 
               
@@ -545,79 +545,22 @@
 <h3 id="1-3-安装Hexo"><a href="#1-3-安装Hexo" class="headerlink" title="1.3 安装Hexo"></a>1.3 安装Hexo</h3><p>所有必备的应用程序安装完成后，即可使用 <code>npm</code>安装 Hexo。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>该命令行在Git Bash 上使用，打开它的方法很简单，在桌面或者文件夹任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，读者可以考虑始终使用Git Bash来进行操作。</p>
-<h2 id="2、建站"><a href="#2、建站" class="headerlink" title="2、建站"></a>2、建站</h2><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<h2 id="2、搭建博客"><a href="#2、搭建博客" class="headerlink" title="2、搭建博客"></a>2、搭建博客</h2><h3 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1 初始化"></a>2.1 初始化</h3><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>当然你也可以自己新建一个目录，比如我在F盘中创建了myblog目录，进入目录中点击右键选择Git Bash Here，直接执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>新建完成后，指定文件夹的目录如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<h3 id="2-1-站点配置文件-config-yml"><a href="#2-1-站点配置文件-config-yml" class="headerlink" title="2.1 站点配置文件_config.yml"></a>2.1 站点配置文件_config.yml</h3><p>站点配置文件<code>_config.yml</code>是在你博客保存目录的根目录下，注意将它与<strong>主题配置文件</strong>进行区分，例如我保存的博客目录为F:\myblog，那么我站点配置文件为F:\myblog\ _config.yml，我使用的主题是Next主题，所以我的主题配置文件为F:\myblog\themes\next\ _config.yml。</p>
-<p>你可以在 <code>_config.yml</code> 中修改大部分的配置。</p>
-<h5 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h5><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>title</code></td>
-<td>网站标题</td>
-</tr>
-<tr>
-<td><code>subtitle</code></td>
-<td>网站副标题</td>
-</tr>
-<tr>
-<td><code>description</code></td>
-<td>网站描述</td>
-</tr>
-<tr>
-<td><code>author</code></td>
-<td>您的名字</td>
-</tr>
-<tr>
-<td><code>language</code></td>
-<td>网站使用的语言</td>
-</tr>
-<tr>
-<td><code>timezone</code></td>
-<td>网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
-</tr>
-</tbody>
-</table>
-<p>其中，<code>description</code>主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含你网站的关键词。<code>author</code>参数用于主题显示文章的作者。</p>
-<h5 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h5><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>url</code></td>
-<td>网址</td>
-<td></td>
-</tr>
-<tr>
-<td><code>root</code></td>
-<td>网站根目录</td>
-<td></td>
-</tr>
-<tr>
-<td><code>permalink</code></td>
-<td>文章的 <a href="https://hexo.io/zh-cn/docs/permalinks" target="_blank" rel="noopener">永久链接</a> 格式</td>
-<td><code>:year/:month/:day/:title/</code></td>
-</tr>
-<tr>
-<td><code>permalink_defaults</code></td>
-<td>永久链接中各部分的默认值</td>
-</tr>
-</tbody>
-</table>
-<p>如果你的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将你的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
-<p>未完待续。。。。。。</p>
+<h3 id="2-2-启动服务器"><a href="#2-2-启动服务器" class="headerlink" title="2.2 启动服务器"></a>2.2 启动服务器</h3><p>执行以下命令来启动服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g 	#hexo generate，生成静态文件</span><br><span class="line">$ hexo s 	#hexo server，启动本地服务器</span><br></pre></td></tr></table></figure>
+<p>如果启动过程中没有报错，此时你用浏览器访问<a href="http://localhost:4000/，就可以看到一个空白的博客页面，hexo3.0使用的默认主题是landscape，此时的服务是本地启动的，别人并不能看到。" target="_blank" rel="noopener">http://localhost:4000/，就可以看到一个空白的博客页面，hexo3.0使用的默认主题是landscape，此时的服务是本地启动的，别人并不能看到。</a></p>
+<h3 id="2-3-Github配置"><a href="#2-3-Github配置" class="headerlink" title="2.3 Github配置"></a>2.3 Github配置</h3><p>想要别人也访问到你的页面，跟着继续吧。首先在Github官网上注册一个账号，有账号的跳过注册，直接登录。登录后找到<code>new repository</code>按钮创建一个新的仓库, 要注意必须创建与你的Github用户名相对应的Github Page仓库，格式必须是username.github.io。 </p>
+<h3 id="2-3-建立关联"><a href="#2-3-建立关联" class="headerlink" title="2.3 建立关联"></a>2.3 建立关联</h3><p>进入你刚创建的仓库，复制仓库的地址 ,然后打开hexo文件夹下的_config.yml文件，拉倒最下面，修改deploy为以下代码，在repository后面粘贴你的仓库地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">    type: git</span><br><span class="line">    repository:  git@github.com:username/username.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p>输入以下命令部署到Github Page</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>然后在浏览器输入<code>username.github.io</code>就可以看到你的博客啦。</p>
+<p>之后每次更改你的<code>_post</code>目录下的博客文章，都需要输入上述命令来部署到Github Page。</p>
 
       
     </div>
@@ -641,7 +584,7 @@
   <p><span>本文标题:</span>Hexo+Github Page搭建个人博客</a></p>
   <p><span>文章作者:</span>Unil</a></p>
   <p><span>发布时间:</span>2019年03月30日 - 18:53:41</p>
-  <p><span>最后更新:</span>2019年03月30日 - 20:13:49</p>
+  <p><span>最后更新:</span>2019年03月30日 - 20:58:13</p>
   <p><span>原始链接:</span><a href="/2019/03/30/Hexo-Github-page搭建个人博客/" title="Hexo+Github Page搭建个人博客">http://Unil1.github.io/2019/03/30/Hexo-Github-page搭建个人博客/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://Unil1.github.io/2019/03/30/Hexo-Github-page搭建个人博客/"  aria-label="复制成功！"></i></span>
   </p>
@@ -678,7 +621,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo-Github-page/" rel="tag"><i class="fa fa-tag"></i> -Hexo -Github page</a>
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+            <a href="/tags/Github-page/" rel="tag"><i class="fa fa-tag"></i> Github page</a>
           
         </div>
       
@@ -687,6 +632,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/30/Hexo-Next主题配置/" rel="prev" title="Hexo-Next主题配置">
+                Hexo-Next主题配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -756,7 +717,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -775,7 +736,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -794,7 +757,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -887,7 +854,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Hexo"><span class="nav-text">1、Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Hexo简介"><span class="nav-text">1.1 Hexo简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装前提"><span class="nav-text">1.2 安装前提</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Git"><span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Node-js"><span class="nav-text">安装Node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-安装Hexo"><span class="nav-text">1.3 安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、建站"><span class="nav-text">2、建站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-站点配置文件-config-yml"><span class="nav-text">2.1 站点配置文件_config.yml</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#网站"><span class="nav-text">网站</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#网址"><span class="nav-text">网址</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Hexo"><span class="nav-text">1、Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Hexo简介"><span class="nav-text">1.1 Hexo简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装前提"><span class="nav-text">1.2 安装前提</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Git"><span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装Node-js"><span class="nav-text">安装Node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-安装Hexo"><span class="nav-text">1.3 安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、搭建博客"><span class="nav-text">2、搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-初始化"><span class="nav-text">2.1 初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-启动服务器"><span class="nav-text">2.2 启动服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-Github配置"><span class="nav-text">2.3 Github配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-建立关联"><span class="nav-text">2.3 建立关联</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -923,7 +890,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">3k</span>
   
 
   
@@ -932,7 +899,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
   
 </div>
 <div class="powered-by">
@@ -957,7 +924,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共935字</span>
+  <span class="post-count">博客全站共1.3k字</span>
 </div>
 
 

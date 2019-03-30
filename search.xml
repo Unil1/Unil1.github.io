@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>新的博客</title>
-      <link href="/2019/03/29/%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2019/03/29/%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[Hexo+Github Page搭建个人博客]]></title>
+    <url>%2F2019%2F03%2F30%2FHexo-Github-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[之前看到很多人搭建自己的博客，而不是依托于CSDN、博客园等站点，因此课后之余，花了点时间搭建了本博客，期间遇到了很多问题，现在再此写下了遇到的麻烦和具体的解决办法，希望对读者有所帮助。 需要安装Git \ Node.js \ Hexo 需要注册Github，并且 1、Hexo1.1 Hexo简介Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1.2 安装前提安装Hexo前需要安装Node.js和Git。 安装Git Windows：下载并安装 git. Linux (Ubuntu, Debian)：sudo apt-get install git-core Linux (Fedora, Red Hat, CentOS)：sudo yum install git-core 注意：初次安装git需要配置用户名和邮箱，否则git会提示：please tell me who you are. 1234&gt; $ git config --global user.name &quot;Your name&quot;&gt; &gt; $ git config --global user.email &quot;Your email&quot;&gt; 此外，初次使用git的用户要使用git协议大概需要三个步骤： 一、生成密钥对 12&gt; $ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;&gt; 二、设置远程仓库（本文以github为例）上的公钥 12345&gt; 1.查看生成的公钥: $ cat ~/.ssh/id_rsa.pub &gt; 2.随后登陆你的GitHub账户，Setting-&gt;左栏点击SSH and GPG keys-&gt;New SSH key&gt; 3.复制上面所查看的公钥，粘贴进key文本域，点击Add key&gt; 4.验证是否起作用: $ ssh -T git@github.com &gt; 三、把git的 remote url 修改为git协议 12&gt; $ git remote set-url origin git@github.com:someaccount/someproject.git&gt; 安装Node.js对于windows用户来说，建议使用 安装程序 进行安装。安装时，请勾选Add to PATH选项。 1.3 安装Hexo所有必备的应用程序安装完成后，即可使用 npm安装 Hexo。 1$ npm install -g hexo-cli 该命令行在Git Bash 上使用，打开它的方法很简单，在桌面或者文件夹任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，读者可以考虑始终使用Git Bash来进行操作。 2、建站安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。 1`$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install` 新建完成后，指定文件夹的目录如下： 1`.├── _config.yml├── package.json├── scaffolds├── source| ├── _drafts| └── _posts└── themes` 2.1 站点配置文件_config.yml站点配置文件_config.yml是在你博客保存目录的根目录下，注意将它与主题配置文件进行区分，例如我保存的博客目录为F:\myblog，那么我站点配置文件为F:\myblog\ _config.yml，我使用的主题是Next主题，所以我的主题配置文件为F:\myblog\themes\next\ _config.yml。 你可以在 _config.yml 中修改大部分的配置。 网站 参数 描述 title 网站标题 subtitle 网站副标题 description 网站描述 author 您的名字 language 网站使用的语言 timezone 网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。 其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含你网站的关键词。author参数用于主题显示文章的作者。 网址 参数 描述 默认值 url 网址 root 网站根目录 permalink 文章的 永久链接 格式 :year/:month/:day/:title/ permalink_defaults 永久链接中各部分的默认值 如果你的网站存放在子目录中，例如 http://yoursite.com/blog，则请将你的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。 未完待续。。。。。。]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo,Github page</tag>
+      </tags>
+  </entry>
 </search>

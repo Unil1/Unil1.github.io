@@ -95,13 +95,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Schedule">
-<meta property="og:url" content="http://Unil1.github.io/schedule/index.html">
+<meta property="og:title" content="Unil&#39;s Blog">
+<meta property="og:url" content="http://Unil1.github.io/categories/blog/index.html">
 <meta property="og:site_name" content="Unil&#39;s Blog">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-29T07:53:33.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Schedule">
+<meta name="twitter:title" content="Unil&#39;s Blog">
 
 
 
@@ -109,7 +108,7 @@
 
   
   
-  <link rel="canonical" href="http://Unil1.github.io/schedule/"/>
+  <link rel="canonical" href="http://Unil1.github.io/categories/blog/"/>
 
 
 
@@ -119,7 +118,7 @@
   };
 </script>
 
-  <title>Schedule | Unil's Blog</title>
+  <title>分类: blog | Unil's Blog</title>
   
 
 
@@ -167,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,7 +242,7 @@
         
         
           
-          <li class="menu-item menu-item-categories">
+          <li class="menu-item menu-item-categories menu-item-active">
 
     
     
@@ -376,70 +375,59 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">Schedule
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          
   
   
   
-  <div class="post-block schedule">
-    <div id="schedule">
-      <ul id="event-list">
-      </ul>
-    </div>
-  </div>
-  
-  
-  
+  <div class="post-block category">
 
-
-        
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>blog<small>分类</small>
+        </h1>
       </div>
+
       
-      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/2019/03/30/Hexo-Github-page搭建个人博客/" itemprop="url">
+            
+              <span itemprop="name">Hexo+Github Page搭建个人博客</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-03-30T18:53:41+08:00"
+              content="2019-03-30">
+          03-30
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
 
-
-
-    
-    
-    
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
           
-
-  
-
-
 
         </div>
         
@@ -813,10 +801,6 @@
 
 
   
-  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
-<script src="/js/src/post-details.js?v=7.0.1"></script>
-
-
 
   
 
@@ -832,8 +816,6 @@
 
   
 
-
-  
 
 
   
@@ -1174,176 +1156,6 @@
   
 
   
-
-<script>
-// Initialization
-function _n(arg) {
-  if (arg) return arg;
-  else return void 0;
-}
-
-var now = new Date();
-var timeMax = new Date();
-var timeMin = new Date();
-
-// Read config form theme config file
-var calId        = _n('<required>')               ;
-var apiKey       = _n('<required>')               ;
-var orderBy      = _n('') || 'startTime';
-var showLocation = _n('') || 'false'    ;
-var offsetMax    = _n( 24 ) || 72         ;
-var offsetMin    = _n( 4 ) || 4          ;
-var showDeleted  = _n( false ) || 'false'    ;
-var singleEvents = _n( true ) || 'true'     ;
-var maxResults   = _n( 250 ) || '250'      ;
-
-timeMax.setHours(now.getHours() + offsetMax);
-timeMin.setHours(now.getHours() - offsetMin);
-
-// Build URL
-BASE_URL           = 'https://www.googleapis.com/calendar/v3/calendars/';
-FIELD_KEY          = 'key';
-FIELD_ORDERBY      = 'orderBy';
-FIELD_TIMEMAX      = 'timeMax';
-FIELD_TIMEMIN      = 'timeMin';
-FIELD_SHOWDELETED  = 'showDeleted';
-FIELD_SINGLEEVENTS = 'singleEvents';
-FIELD_MAXRESULTS   = 'maxResults';
-
-timeMaxISO         = timeMax.toISOString();
-timeMinISO         = timeMin.toISOString();
-
-request_url = BASE_URL + calId + '/events?' +
-  FIELD_KEY          + '=' + apiKey       + '&' +
-  FIELD_ORDERBY      + '=' + orderBy      + '&' +
-  FIELD_TIMEMAX      + '=' + timeMaxISO   + '&' +
-  FIELD_TIMEMIN      + '=' + timeMinISO   + '&' +
-  FIELD_SHOWDELETED  + '=' + showDeleted  + '&' +
-  FIELD_SINGLEEVENTS + '=' + singleEvents + '&' +
-  FIELD_MAXRESULTS   + '=' + maxResults;
-
-fetchData();
-var queryLoop = setInterval(fetchData, 60000);
-
-function fetchData() {
-  $.ajax({
-    dataType: 'json',
-    url: request_url,
-    success: function(data) {
-
-      $eventList = $('#schedule #event-list');
-
-      // clean the event list
-      $eventList.html('');
-      var prevEnd = 0; // used to decide where to insert an <hr/>
-
-      data.items.forEach((event) => {
-
-        // parse data
-        var utc   = new Date().getTimezoneOffset() * 60000;
-        var start = event.start.dateTime = new Date(event.start.dateTime || (new Date(event.start.date).getTime() + utc));
-        var end   = event.end.dateTime = new Date(event.end.dateTime || (new Date(event.end.date).getTime() + utc));
-
-        tense = judgeTense(now, start, end); // 0:now 1:future -1:past
-
-        if (tense == 1 && prevEnd < now) $eventList.append('<hr/>');
-
-        eventDOM = buildEventDOM(tense, event);
-        $eventList.append(eventDOM);
-
-        prevEnd = end;
-      });
-    }
-  });
-}
-
-function getRelativeTime(current, previous) {
-  var msPerMinute = 60 * 1000;
-  var msPerHour = msPerMinute * 60;
-  var msPerDay = msPerHour * 24;
-  var msPerMonth = msPerDay * 30;
-  var msPerYear = msPerDay * 365;
-
-  var elapsed = current - previous;
-  var tense = elapsed > 0 ? 'ago' : 'later';
-
-  elapsed = Math.abs(elapsed);
-
-  if      ( elapsed < msPerHour  ) {
-    return Math.round(elapsed/msPerMinute) + ' minutes ' + tense;
-  }
-  else if ( elapsed < msPerDay   ) {
-    return Math.round(elapsed/msPerHour) + ' hours ' + tense;
-  }
-  else if ( elapsed < msPerMonth ) {
-    return 'about ' + Math.round(elapsed/msPerDay) + ' days ' + tense;
-  }
-  else if ( elapsed < msPerYear  ) {
-    return 'about ' + Math.round(elapsed/msPerMonth) + ' months ' + tense;
-  }
-  else {
-    return 'about' + Math.round(elapsed/msPerYear) + ' years' + tense;
-  }
-}
-
-function judgeTense(now, eventStart, eventEnd) {
-  if      (eventEnd   < now) { return -1; }
-  else if (eventStart > now) { return  1; }
-  else                       { return  0; }
-}
-
-function buildEventDOM(tense, event) {
-  var tenseClass = '';
-  var start      = event.start.dateTime;
-  var end        = event.end.dateTime;
-  switch(tense) {
-    case 0 : // now
-      tenseClass = 'event-now';
-      break;
-    case 1 : // future
-      tenseClass = 'event-future';
-      break;
-    case -1: // past
-      tenseClass = 'event-past';
-      break;
-    default:
-      throw 'Time data error';
-  }
-  durationFormat = {
-    weekday: 'short',
-    hour   : '2-digit',
-    minute : '2-digit'
-  };
-  relativeTimeStr = (tense == 0) ? 'NOW' : getRelativeTime(now, start);
-  durationStr = start.toLocaleTimeString([], durationFormat) + ' - ' +
-                end.toLocaleTimeString([], durationFormat);
-
-  liOpen  = '<li class="event ' + tenseClass + '">';
-  liClose = '</li>';
-  h2Open  = '<h2 class="event-summary">';
-  h2Close = '</h2>';
-
-  locationDOM     = '';
-  if (showLocation && event.location) {
-    locationDOM   = '<span class="event-location event-details">' + event.location + '</span>';
-  }
-  relativeTimeDOM = '<span class="event-relative-time">' + relativeTimeStr + '</span>';
-  durationDOM     = '<span class="event-duration event-details">' + durationStr + '</span>';
-
-  eventContent =
-    liOpen +
-      h2Open +
-        event.summary +
-        relativeTimeDOM+
-      h2Close +
-      locationDOM +
-      durationDOM +
-    liClose;
-  return eventContent;
-}
-</script>
-
-
 
   
 

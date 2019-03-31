@@ -94,13 +94,29 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Unil&#39;s Blog">
-<meta property="og:url" content="http://Unil1.github.io/categories/Hexo/index.html">
+  <meta name="description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;e">
+<meta name="keywords" content="QT,C++,matlab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QT框架下C++调用matlab混合编程">
+<meta property="og:url" content="http://Unil1.github.io/2019/03/31/QT框架下C-调用matlab混合编程/index.html">
 <meta property="og:site_name" content="Unil&#39;s Blog">
+<meta property="og:description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;e">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="d:/Myblog/source/image/图1.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图2.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图3.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图4.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图5.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图6.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图10.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图9.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图7.bmp">
+<meta property="og:image" content="d:/Myblog/source/image/图8.bmp">
+<meta property="og:updated_time" content="2019-03-31T10:58:41.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unil&#39;s Blog">
+<meta name="twitter:title" content="QT框架下C++调用matlab混合编程">
+<meta name="twitter:description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;e">
+<meta name="twitter:image" content="d:/Myblog/source/image/图1.bmp">
 
 
 
@@ -108,7 +124,7 @@
 
   
   
-  <link rel="canonical" href="http://Unil1.github.io/categories/Hexo/"/>
+  <link rel="canonical" href="http://Unil1.github.io/2019/03/31/QT框架下C-调用matlab混合编程/"/>
 
 
 
@@ -118,7 +134,7 @@
   };
 </script>
 
-  <title>分类: Hexo | Unil's Blog</title>
+  <title>QT框架下C++调用matlab混合编程 | Unil's Blog</title>
   
 
 
@@ -166,7 +182,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,7 +258,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -349,85 +365,318 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hexo<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Unil1.github.io/2019/03/31/QT框架下C-调用matlab混合编程/"/>
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Unil"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/header.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Unil's Blog"/>
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/03/30/Hexo-Next主题配置/" itemprop="url">
-            
-              <span itemprop="name">Hexo-Next主题配置</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">QT框架下C++调用matlab混合编程
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-30T20:55:46+08:00"
-              content="2019-03-30">
-          03-30
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-31 18:54:15 / 修改时间：18:58:41" itemprop="dateCreated datePublished" datetime="2019-03-31T18:54:15+08:00">2019-03-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/QT/" itemprop="url" rel="index"><span itemprop="name">QT</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.7k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在<code>visual studio</code>下调用<code>MATLAB</code>程序比较简单，但是在<code>QT</code>框架下用<code>C++</code>调用<code>matlab</code>复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下<code>QT</code>调用<code>MATLAB</code>程序进行混合编程的基本流程。</p>
+<h2 id="编译DLL文件"><a href="#编译DLL文件" class="headerlink" title="编译DLL文件"></a>编译DLL文件</h2><p>作为例子，我先编写了一个简单的相加函数<code>add_matlab.m</code>，代码如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[p]</span>=<span class="title">add_matlab</span><span class="params">(a,b)</span></span></span><br><span class="line">p=a+b;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>保存之后，开始编译成<code>DLL</code>文件。</p>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><p>要想成功编译成<code>DLL</code>文件，首先你的<code>MATLAB</code>得是成功破解的版本，否则会出现报错:<code>Test checkout of feature &#39;Compiler&#39; failed</code>。</p>
+</li>
+<li><p>需要配置<code>MATLAB</code>编译环境，在<code>MATLAB</code>命令行窗口下输入<code>mbuild -setup</code>,如下图：</p>
+<p><img src="D:\Myblog\source\image\图1.bmp" alt=""></p>
+<p>点击<code>C++</code>的选项进行安装。如果未出现上述信息，而是显示未找到支持的编译器或<code>SDK</code>，则需要安装对应的编译器，要注意<code>MATLAB</code>安装的编译器必须和你的<code>QT</code>的编译器一个类型，绝对不要<code>QT</code>是<code>MinGW</code>编译器，而<code>MATLAB</code>是<code>MSVC</code>编译器，一定要一致。</p>
+<p>安装编译器后在命令行窗口中输入<code>mex -setup C++</code> ,如果没有报错即安装成功。</p>
+</li>
+</ul>
+<p>在命令行输入<code>deploytool</code>,如下图：</p>
+<p><img src="D:\Myblog\source\image\图2.bmp" alt=""></p>
+<p>选择<code>Library Compile</code>，如下图：</p>
+<p><img src="D:\Myblog\source\image\图3.bmp" alt=""></p>
+<p>在<code>TYPE</code>栏选择<code>C++ shared Library</code>，在<code>EXPORTED FUNCTIONS</code>添加要编译的<code>.m</code>文件，本文以上述所写的<code>add_matlab.m</code>为例，点击右上角绿色的<code>Package</code>，即可产生<code>DLL</code>文件，文件夹如下图：</p>
+<p><img src="D:\Myblog\source\image\图4.bmp" alt=""></p>
+<p><code>for_testing</code> 目录下是用于测试的，但是<code>dll</code>不是可执行文件，不能直接进行进行测试。</p>
+<p><code>for_redistribution</code>目录下是文件<code>MyAppInstaller_web.exe</code>，这个是<code>MATLAB</code>运行时库的和本项目的安装文件，运行后可从网上下载<code>MATLAB</code>的运行时库进行安装，还会安装本项目生成的<code>DLL</code>、<code>LIB</code>和<code>h</code>文件。</p>
+<p>此处我们选择第二个文件夹，我们将要使用的是其中的<code>.h</code>、<code>.lib</code>、<code>.dll</code>文件。</p>
+<p><img src="D:\Myblog\source\image\图5.bmp" alt=""></p>
+<h2 id="QT调用add-matlab-dll"><a href="#QT调用add-matlab-dll" class="headerlink" title="QT调用add_matlab.dll"></a>QT调用<code>add_matlab.dll</code></h2><p>首先我们创建一个<code>QtWidget Application</code>项目<code>test_dll</code>，界面如下</p>
+<p><img src="D:\Myblog\source\image\图6.bmp" alt=""></p>
+<p>实现从文本框输入两个数值之后，<code>qdebug</code>出相加的结果。</p>
+<h5 id="添加-lib库"><a href="#添加-lib库" class="headerlink" title="添加.lib库"></a>添加.lib库</h5><p>在项目目录下新建一个<code>include</code>目录，将前面编译生成的<code>add_matlab\for_redistribution_files_only</code>目录下的<code>add_matlab.lib</code>和<code>add_matlab.h</code>、<code>add_matlab.dll</code>文件复制到此目录下。</p>
+<p>在<code>Qt Creator</code>里，项目节点上单击右键，选择<code>“Add Library...”</code>，在出现的向导中首先选择<code>“External Library”</code>，后续出现下图的界面，选择库<code>test_dll\include\</code>目录下的库文件<code>add_matlab.Lib</code>，其他选择如图。</p>
+<p><img src="D:\Myblog\source\image\图10.bmp" alt=""></p>
+<p>在此对话框完成后，在<code>test_dll.pro</code>文件中会增加如下的几行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">win32: LIBS += -L$$PWD/include/ -ladd_matlab</span><br><span class="line"></span><br><span class="line">INCLUDEPATH += $$PWD/include</span><br><span class="line">DEPENDPATH += $$PWD/include</span><br></pre></td></tr></table></figure>
+<h5 id="添加Matlab其他依赖库和头文件搜索路径"><a href="#添加Matlab其他依赖库和头文件搜索路径" class="headerlink" title="添加Matlab其他依赖库和头文件搜索路径"></a><strong>添加<code>Matlab</code>其他依赖库和头文件搜索路径</strong></h5><p>除了自己编译生成的<code>DLL</code>相关的<code>.lib</code>文件和头文件，要编译此<code>Qt</code>项目，还需要用到<code>MATLAB</code>的几个<code>.lib</code>文件和<code>.h</code>文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 用到的MATLAB 的.lib库文件 及其搜索路径</span><br><span class="line">win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibmx</span><br><span class="line">win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibmat</span><br><span class="line">win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibeng</span><br><span class="line">win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -lmclmcr</span><br><span class="line">win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -lmclmcrrt</span><br><span class="line">win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibmex</span><br><span class="line"></span><br><span class="line">INCLUDEPATH += C:/Matlab/v94/extern/lib/win64/microsoft</span><br><span class="line">DEPENDPATH += C:/Matlab/v94/extern/lib/win64/microsoft</span><br><span class="line"></span><br><span class="line"># .h文件搜索路径</span><br><span class="line">INCLUDEPATH += C:/MATLAB/v94/extern/include</span><br><span class="line">INCLUDEPATH += C:/MATLAB/v94/extern/include/win64</span><br></pre></td></tr></table></figure>
+<p>此处路径为<code>MATLAB</code>安装路径，按照你的安装路径相应修改，<strong>要注意<code>MATLAB</code>安装路径不要带有空格（如<code>Program Files</code>），否则会被视为两行</strong>。</p>
+<p><strong><code>add_matlab.dll</code>文件要复制到项目编译后的<code>debug</code>目录下。</strong></p>
+<h5 id="QT编译"><a href="#QT编译" class="headerlink" title="QT编译"></a>QT编译</h5><p>将<code>add_matlab.h</code>文件添加进项目中，并且在<code>MainWidget.h</code>文件中引用，随后使用<code>add_matlab</code>函数代码，如下图：</p>
+<p><img src="D:\Myblog\source\image\图9.bmp" alt=""></p>
+<p><code>add_matlabInitialize()</code>为初始化函数，一定要记得添加。</p>
+<p><code>QT</code>中使用<code>mwArray</code>类型数组作为<code>MATLAB</code>编译函数的输入输出数据接口，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mwArray matrixA(rowCnt,colCnt,mxDOUBLE_CLASS, mxREAL);</span><br></pre></td></tr></table></figure>
+<p>此外<code>add_matlab</code>函数第一个参数<code>int  nargout</code>是输出参数个数，表示后面紧跟着的<code>nargout</code>个变量是输出参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extern LIB_add_matlab_CPP_API void MW_CALL_CONV add_matlab(int nargout, mwArray&amp; C, const mwArray&amp; A, const mwArray&amp; B);</span><br></pre></td></tr></table></figure>
+<p>编译运行之后，结果如下图：</p>
+<p><img src="D:\Myblog\source\image\图7.bmp" alt=""></p>
+<p><img src="D:\Myblog\source\image\图8.bmp" alt=""></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>QT框架下C++调用matlab混合编程</a></p>
+  <p><span>文章作者:</span>Unil</a></p>
+  <p><span>发布时间:</span>2019年03月31日 - 18:54:15</p>
+  <p><span>最后更新:</span>2019年03月31日 - 18:58:41</p>
+  <p><span>原始链接:</span><a href="/2019/03/31/QT框架下C-调用matlab混合编程/" title="QT框架下C++调用matlab混合编程">http://Unil1.github.io/2019/03/31/QT框架下C-调用matlab混合编程/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://Unil1.github.io/2019/03/31/QT框架下C-调用matlab混合编程/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/QT/" rel="tag"><i class="fa fa-tag"></i> QT</a>
+          
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+          
+            <a href="/tags/matlab/" rel="tag"><i class="fa fa-tag"></i> matlab</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/30/Hexo-Next主题配置/" rel="next" title="Hexo-Next主题配置">
+                <i class="fa fa-chevron-left"></i> Hexo-Next主题配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -447,8 +696,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -601,6 +859,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译DLL文件"><span class="nav-text">编译DLL文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QT调用add-matlab-dll"><span class="nav-text">QT调用add_matlab.dll</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加-lib库"><span class="nav-text">添加.lib库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加Matlab其他依赖库和头文件搜索路径"><span class="nav-text">添加Matlab其他依赖库和头文件搜索路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#QT编译"><span class="nav-text">QT编译</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -815,6 +1090,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -830,6 +1109,8 @@
 
   
 
+
+  
 
 
   

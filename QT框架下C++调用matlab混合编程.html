@@ -94,29 +94,29 @@
 
 
 
-  <meta name="description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;e">
+  <meta name="description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。">
 <meta name="keywords" content="QT,C++,matlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QT框架下C++调用matlab混合编程">
-<meta property="og:url" content="http://Unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/index.html">
+<meta property="og:url" content="http://www.unil.online/QT框架下C++调用matlab混合编程.html">
 <meta property="og:site_name" content="Unil&#39;s Blog">
-<meta property="og:description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;e">
+<meta property="og:description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图1.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图2.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图3.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图4.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图5.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图6.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图10.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图9.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图7.bmp">
-<meta property="og:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图8.bmp">
-<meta property="og:updated_time" content="2019-03-31T11:14:14.906Z">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图1.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图2.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图3.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图4.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图5.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图6.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图10.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图9.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图7.bmp">
+<meta property="og:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图8.bmp">
+<meta property="og:updated_time" content="2019-03-31T11:35:41.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QT框架下C++调用matlab混合编程">
-<meta name="twitter:description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;e">
-<meta name="twitter:image" content="http://unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/图1.bmp">
+<meta name="twitter:description" content="在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。">
+<meta name="twitter:image" content="http://www.unil.online/QT框架下C++调用matlab混合编程/图1.bmp">
 
 
 
@@ -124,7 +124,7 @@
 
   
   
-  <link rel="canonical" href="http://Unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/"/>
+  <link rel="canonical" href="http://www.unil.online/QT框架下C++调用matlab混合编程"/>
 
 
 
@@ -385,7 +385,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/"/>
+    <link itemprop="mainEntityOfPage" href="http://www.unil.online/QT框架下C++调用matlab混合编程.html"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Unil"/>
@@ -428,7 +428,7 @@
                 
               
 
-              <time title="创建时间：2019-03-31 18:54:15 / 修改时间：19:14:14" itemprop="dateCreated datePublished" datetime="2019-03-31T18:54:15+08:00">2019-03-31</time>
+              <time title="创建时间：2019-03-31 18:54:15 / 修改时间：19:35:41" itemprop="dateCreated datePublished" datetime="2019-03-31T18:54:15+08:00">2019-03-31</time>
             
 
             
@@ -522,6 +522,7 @@
 
       
         <p>在<code>visual studio</code>下调用<code>MATLAB</code>程序比较简单，但是在<code>QT</code>框架下用<code>C++</code>调用<code>matlab</code>复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下<code>QT</code>调用<code>MATLAB</code>程序进行混合编程的基本流程。</p>
+<a id="more"></a>
 <h2 id="编译DLL文件"><a href="#编译DLL文件" class="headerlink" title="编译DLL文件"></a>编译DLL文件</h2><p>作为例子，我先编写了一个简单的相加函数<code>add_matlab.m</code>，代码如下：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[p]</span>=<span class="title">add_matlab</span><span class="params">(a,b)</span></span></span><br><span class="line">p=a+b;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p>保存之后，开始编译成<code>DLL</code>文件。</p>
@@ -530,27 +531,27 @@
 <li><p>要想成功编译成<code>DLL</code>文件，首先你的<code>MATLAB</code>得是成功破解的版本，否则会出现报错:<code>Test checkout of feature &#39;Compiler&#39; failed</code>。</p>
 </li>
 <li><p>需要配置<code>MATLAB</code>编译环境，在<code>MATLAB</code>命令行窗口下输入<code>mbuild -setup</code>,如下图：</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图1.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图1.bmp" alt=""></p>
 <p>点击<code>C++</code>的选项进行安装。如果未出现上述信息，而是显示未找到支持的编译器或<code>SDK</code>，则需要安装对应的编译器，要注意<code>MATLAB</code>安装的编译器必须和你的<code>QT</code>的编译器一个类型，绝对不要<code>QT</code>是<code>MinGW</code>编译器，而<code>MATLAB</code>是<code>MSVC</code>编译器，一定要一致。</p>
 <p>安装编译器后在命令行窗口中输入<code>mex -setup C++</code> ,如果没有报错即安装成功。</p>
 </li>
 </ul>
 <p>在命令行输入<code>deploytool</code>,如下图：</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图2.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图2.bmp" alt=""></p>
 <p>选择<code>Library Compile</code>，如下图：</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图3.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图3.bmp" alt=""></p>
 <p>在<code>TYPE</code>栏选择<code>C++ shared Library</code>，在<code>EXPORTED FUNCTIONS</code>添加要编译的<code>.m</code>文件，本文以上述所写的<code>add_matlab.m</code>为例，点击右上角绿色的<code>Package</code>，即可产生<code>DLL</code>文件，文件夹如下图：</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图4.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图4.bmp" alt=""></p>
 <p><code>for_testing</code> 目录下是用于测试的，但是<code>dll</code>不是可执行文件，不能直接进行进行测试。</p>
 <p><code>for_redistribution</code>目录下是文件<code>MyAppInstaller_web.exe</code>，这个是<code>MATLAB</code>运行时库的和本项目的安装文件，运行后可从网上下载<code>MATLAB</code>的运行时库进行安装，还会安装本项目生成的<code>DLL</code>、<code>LIB</code>和<code>h</code>文件。</p>
 <p>此处我们选择第二个文件夹，我们将要使用的是其中的<code>.h</code>、<code>.lib</code>、<code>.dll</code>文件。</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图5.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图5.bmp" alt=""></p>
 <h2 id="QT调用add-matlab-dll"><a href="#QT调用add-matlab-dll" class="headerlink" title="QT调用add_matlab.dll"></a>QT调用<code>add_matlab.dll</code></h2><p>首先我们创建一个<code>QtWidget Application</code>项目<code>test_dll</code>，界面如下</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图6.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图6.bmp" alt=""></p>
 <p>实现从文本框输入两个数值之后，<code>qdebug</code>出相加的结果。</p>
 <h5 id="添加-lib库"><a href="#添加-lib库" class="headerlink" title="添加.lib库"></a>添加.lib库</h5><p>在项目目录下新建一个<code>include</code>目录，将前面编译生成的<code>add_matlab\for_redistribution_files_only</code>目录下的<code>add_matlab.lib</code>和<code>add_matlab.h</code>、<code>add_matlab.dll</code>文件复制到此目录下。</p>
 <p>在<code>Qt Creator</code>里，项目节点上单击右键，选择<code>“Add Library...”</code>，在出现的向导中首先选择<code>“External Library”</code>，后续出现下图的界面，选择库<code>test_dll\include\</code>目录下的库文件<code>add_matlab.Lib</code>，其他选择如图。</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图10.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图10.bmp" alt=""></p>
 <p>在此对话框完成后，在<code>test_dll.pro</code>文件中会增加如下的几行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">win32: LIBS += -L$$PWD/include/ -ladd_matlab</span><br><span class="line"></span><br><span class="line">INCLUDEPATH += $$PWD/include</span><br><span class="line">DEPENDPATH += $$PWD/include</span><br></pre></td></tr></table></figure>
 <h5 id="添加Matlab其他依赖库和头文件搜索路径"><a href="#添加Matlab其他依赖库和头文件搜索路径" class="headerlink" title="添加Matlab其他依赖库和头文件搜索路径"></a><strong>添加<code>Matlab</code>其他依赖库和头文件搜索路径</strong></h5><p>除了自己编译生成的<code>DLL</code>相关的<code>.lib</code>文件和头文件，要编译此<code>Qt</code>项目，还需要用到<code>MATLAB</code>的几个<code>.lib</code>文件和<code>.h</code>文件。</p>
@@ -558,15 +559,15 @@
 <p>此处路径为<code>MATLAB</code>安装路径，按照你的安装路径相应修改，<strong>要注意<code>MATLAB</code>安装路径不要带有空格（如<code>Program Files</code>），否则会被视为两行</strong>。</p>
 <p><strong><code>add_matlab.dll</code>文件要复制到项目编译后的<code>debug</code>目录下。</strong></p>
 <h5 id="QT编译"><a href="#QT编译" class="headerlink" title="QT编译"></a>QT编译</h5><p>将<code>add_matlab.h</code>文件添加进项目中，并且在<code>MainWidget.h</code>文件中引用，随后使用<code>add_matlab</code>函数代码，如下图：</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图9.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图9.bmp" alt=""></p>
 <p><code>add_matlabInitialize()</code>为初始化函数，一定要记得添加。</p>
 <p><code>QT</code>中使用<code>mwArray</code>类型数组作为<code>MATLAB</code>编译函数的输入输出数据接口，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mwArray matrixA(rowCnt,colCnt,mxDOUBLE_CLASS, mxREAL);</span><br></pre></td></tr></table></figure>
 <p>此外<code>add_matlab</code>函数第一个参数<code>int  nargout</code>是输出参数个数，表示后面紧跟着的<code>nargout</code>个变量是输出参数</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extern LIB_add_matlab_CPP_API void MW_CALL_CONV add_matlab(int nargout, mwArray&amp; C, const mwArray&amp; A, const mwArray&amp; B);</span><br></pre></td></tr></table></figure>
 <p>编译运行之后，结果如下图：</p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图7.bmp" alt=""></p>
-<p><img src="/2019/03/31/QT框架下C++调用matlab混合编程/图8.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图7.bmp" alt=""></p>
+<p><img src="/QT框架下C++调用matlab混合编程/图8.bmp" alt=""></p>
 
       
     </div>
@@ -590,9 +591,9 @@
   <p><span>本文标题:</span>QT框架下C++调用matlab混合编程</a></p>
   <p><span>文章作者:</span>Unil</a></p>
   <p><span>发布时间:</span>2019年03月31日 - 18:54:15</p>
-  <p><span>最后更新:</span>2019年03月31日 - 19:14:14</p>
-  <p><span>原始链接:</span><a href="/2019/03/31/QT框架下C++调用matlab混合编程/" title="QT框架下C++调用matlab混合编程">http://Unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://Unil1.github.io/2019/03/31/QT框架下C++调用matlab混合编程/"  aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年03月31日 - 19:35:41</p>
+  <p><span>原始链接:</span><a href="/QT框架下C++调用matlab混合编程.html" title="QT框架下C++调用matlab混合编程">http://www.unil.online/QT框架下C++调用matlab混合编程.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.unil.online/QT框架下C++调用matlab混合编程.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -644,7 +645,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/30/Hexo-Next主题配置/" rel="next" title="Hexo-Next主题配置">
+              <a href="/Hexo-Next主题配置.html" rel="next" title="Hexo-Next主题配置">
                 <i class="fa fa-chevron-left"></i> Hexo-Next主题配置
               </a>
             

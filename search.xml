@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Qt程序打包]]></title>
+    <url>%2FQt%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85.html</url>
+    <content type="text"><![CDATA[此处提供一种简单的方法将Qt中的程序打包出来到别的电脑运行： 提取出.exe文件至一个新的目录下 使用qt Desktop，运行命令行：（注意空格） 12$ cd /d 放置.exe文件的新目录地址$ windeployqt 文件名.exe]]></content>
+      <categories>
+        <category>QT</category>
+      </categories>
+      <tags>
+        <tag>－QT　</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[QT框架下C++调用matlab混合编程]]></title>
     <url>%2FQT%E6%A1%86%E6%9E%B6%E4%B8%8BC%2B%2B%E8%B0%83%E7%94%A8matlab%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B.html</url>
     <content type="text"><![CDATA[在visual studio下调用MATLAB程序比较简单，但是在QT框架下用C++调用matlab复杂许多，网上诸多博客不够具体详细，这里结合我的实际过程以及相关博客，给读者分享一下QT调用MATLAB程序进行混合编程的基本流程。 编译DLL文件作为例子，我先编写了一个简单的相加函数add_matlab.m，代码如下： 123function [p]=add_matlab(a,b)p=a+b;end 保存之后，开始编译成DLL文件。 注意： 要想成功编译成DLL文件，首先你的MATLAB得是成功破解的版本，否则会出现报错:Test checkout of feature &#39;Compiler&#39; failed。 需要配置MATLAB编译环境，在MATLAB命令行窗口下输入mbuild -setup,如下图： 点击C++的选项进行安装。如果未出现上述信息，而是显示未找到支持的编译器或SDK，则需要安装对应的编译器，要注意MATLAB安装的编译器必须和你的QT的编译器一个类型，绝对不要QT是MinGW编译器，而MATLAB是MSVC编译器，一定要一致。 安装编译器后在命令行窗口中输入mex -setup C++ ,如果没有报错即安装成功。 在命令行输入deploytool,如下图： 选择Library Compile，如下图： 在TYPE栏选择C++ shared Library，在EXPORTED FUNCTIONS添加要编译的.m文件，本文以上述所写的add_matlab.m为例，点击右上角绿色的Package，即可产生DLL文件，文件夹如下图： for_testing 目录下是用于测试的，但是dll不是可执行文件，不能直接进行进行测试。 for_redistribution目录下是文件MyAppInstaller_web.exe，这个是MATLAB运行时库的和本项目的安装文件，运行后可从网上下载MATLAB的运行时库进行安装，还会安装本项目生成的DLL、LIB和h文件。 此处我们选择第二个文件夹，我们将要使用的是其中的.h、.lib、.dll文件。 QT调用add_matlab.dll首先我们创建一个QtWidget Application项目test_dll，界面如下 实现从文本框输入两个数值之后，qdebug出相加的结果。 添加.lib库在项目目录下新建一个include目录，将前面编译生成的add_matlab\for_redistribution_files_only目录下的add_matlab.lib和add_matlab.h、add_matlab.dll文件复制到此目录下。 在Qt Creator里，项目节点上单击右键，选择“Add Library...”，在出现的向导中首先选择“External Library”，后续出现下图的界面，选择库test_dll\include\目录下的库文件add_matlab.Lib，其他选择如图。 在此对话框完成后，在test_dll.pro文件中会增加如下的几行： 1234win32: LIBS += -L$$PWD/include/ -ladd_matlabINCLUDEPATH += $$PWD/includeDEPENDPATH += $$PWD/include 添加Matlab其他依赖库和头文件搜索路径除了自己编译生成的DLL相关的.lib文件和头文件，要编译此Qt项目，还需要用到MATLAB的几个.lib文件和.h文件。 1234567891011121314# 用到的MATLAB 的.lib库文件 及其搜索路径win32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibmxwin32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibmatwin32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibengwin32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -lmclmcrwin32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -lmclmcrrtwin32: LIBS += -LC:/Matlab/v94/extern/lib/win64/microsoft/ -llibmexINCLUDEPATH += C:/Matlab/v94/extern/lib/win64/microsoftDEPENDPATH += C:/Matlab/v94/extern/lib/win64/microsoft# .h文件搜索路径INCLUDEPATH += C:/MATLAB/v94/extern/includeINCLUDEPATH += C:/MATLAB/v94/extern/include/win64 此处路径为MATLAB安装路径，按照你的安装路径相应修改，要注意MATLAB安装路径不要带有空格（如Program Files），否则会被视为两行。 add_matlab.dll文件要复制到项目编译后的debug目录下。 QT编译将add_matlab.h文件添加进项目中，并且在MainWidget.h文件中引用，随后使用add_matlab函数代码，如下图： add_matlabInitialize()为初始化函数，一定要记得添加。 QT中使用mwArray类型数组作为MATLAB编译函数的输入输出数据接口， 1mwArray matrixA(rowCnt,colCnt,mxDOUBLE_CLASS, mxREAL); 此外add_matlab函数第一个参数int nargout是输出参数个数，表示后面紧跟着的nargout个变量是输出参数 1extern LIB_add_matlab_CPP_API void MW_CALL_CONV add_matlab(int nargout, mwArray&amp; C, const mwArray&amp; A, const mwArray&amp; B); 编译运行之后，结果如下图：]]></content>

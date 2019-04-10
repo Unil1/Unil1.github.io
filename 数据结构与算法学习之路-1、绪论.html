@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Unil&#39;s Blog">
 <meta property="og:description" content="该博客为数据结构与算法课程的学习笔记！ (a) 计算计算 = 信息处理：借助某种工具，遵照一定的规则，以明确而机械的方式进行。 计算模型 = 计算机 = 信息处理工具 算法： 即在特定的计算模型下，旨在解决特定问题的指令序列。  正确性：的确可以解决的问题。 确定性：任意算法都可以描述成一个由基本操作组成的序列。 可行性：每一基本操作都可以实现，且在常数时间内完成。 有穷性：对于任意输入，经有穷次">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T10:49:54.232Z">
+<meta property="og:updated_time" content="2019-04-10T10:59:18.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构与算法学习之路--1、绪论">
 <meta name="twitter:description" content="该博客为数据结构与算法课程的学习笔记！ (a) 计算计算 = 信息处理：借助某种工具，遵照一定的规则，以明确而机械的方式进行。 计算模型 = 计算机 = 信息处理工具 算法： 即在特定的计算模型下，旨在解决特定问题的指令序列。  正确性：的确可以解决的问题。 确定性：任意算法都可以描述成一个由基本操作组成的序列。 可行性：每一基本操作都可以实现，且在常数时间内完成。 有穷性：对于任意输入，经有穷次">
@@ -417,7 +417,7 @@
                 
               
 
-              <time title="创建时间：2019-04-10 18:44:37 / 修改时间：18:49:54" itemprop="dateCreated datePublished" datetime="2019-04-10T18:44:37+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-10 18:44:37 / 修改时间：18:59:18" itemprop="dateCreated datePublished" datetime="2019-04-10T18:44:37+08:00">2019-04-10</time>
             
 
             
@@ -520,10 +520,12 @@
 <li>可行性：每一基本操作都可以实现，且在常数时间内完成。</li>
 <li>有穷性：对于任意输入，经有穷次基本操作都可以得到输出。</li>
 </ol>
-<h3 id="b-计算模型"><a href="#b-计算模型" class="headerlink" title="(b) 计算模型"></a>(b) 计算模型</h3><p>T(n) : 用算法A求解某一问题规模为n的实例所需的计算成本<br>$$<br>T(n)=max [T(p)| |p|=n)]<br>$$<br>​    亦即：在规模同为n的所有实例中，只关注最坏（成本最高）者。</p>
+<h3 id="b-计算模型"><a href="#b-计算模型" class="headerlink" title="(b) 计算模型"></a>(b) 计算模型</h3><p>T(n) : 用算法A求解某一问题规模为n的实例所需的计算成本</p>
+<script type="math/tex; mode=display">
+T(n)=max [T(p)| |p|=n)]</script><p>​    亦即：在规模同为n的所有实例中，只关注最坏（成本最高）者。</p>
 <p>T(n)=算法为解决规模为n的问题所需的基本操作次数。</p>
-<h3 id="c-大o记号"><a href="#c-大o记号" class="headerlink" title="(c) 大o记号"></a>(c) 大o记号</h3><p>$$<br>T(n) =o(f(n))<br>$$</p>
-<p>f(n)相对于T(n)更加简洁，但依旧可以反映后者的增长趋势。f(n)常系数可以忽略，低次项可以忽略。</p>
+<h3 id="c-大o记号"><a href="#c-大o记号" class="headerlink" title="(c) 大o记号"></a>(c) 大o记号</h3><script type="math/tex; mode=display">
+T(n) =o(f(n))</script><p>f(n)相对于T(n)更加简洁，但依旧可以反映后者的增长趋势。f(n)常系数可以忽略，低次项可以忽略。</p>
 <p>$o(1)$<strong>=任意常数</strong>: 此类算法效率最高，是对数据结构的基本操作，其代码一定满足以下：</p>
 <ul>
 <li>一定不含循环</li>
@@ -583,7 +585,7 @@
   <p><span>本文标题:</span>数据结构与算法学习之路--1、绪论</a></p>
   <p><span>文章作者:</span>Unil</a></p>
   <p><span>发布时间:</span>2019年04月10日 - 18:44:37</p>
-  <p><span>最后更新:</span>2019年04月10日 - 18:49:54</p>
+  <p><span>最后更新:</span>2019年04月10日 - 18:59:18</p>
   <p><span>原始链接:</span><a href="/数据结构与算法学习之路-1、绪论.html" title="数据结构与算法学习之路--1、绪论">http://www.unil.online/数据结构与算法学习之路-1、绪论.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.unil.online/数据结构与算法学习之路-1、绪论.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -1440,6 +1442,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 

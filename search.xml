@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[深度探索C++对象模型]]></title>
+    <url>%2F%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2C%2B%2B%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.html</url>
+    <content type="text"><![CDATA[​ C++在布局以及存取时间上主要的额外负担是由virtual引起，包括：virtual function 和 virtual base class 1.1 c++对象模式​ C++中有两种类数据成员：static和nonstatic，以及三种类成员函数：static、nonstatic、virtual。 ​ 简单对象模型：成员本身不存放在object中，只有指向成员的指针存放在object中。object的成员是以slot的索引值来寻址。 ​ 表格驱动模型：将所有与成员相关的信息抽象出来，放在一个data member table和一个member function table之中，class object本身则含有指向这两个表格的指针。member function table是一系列的slots，每个slot指出一个member function，data member table 则直接含有data本身。该模型并没有直接应用到编译器当中，但该观念却成为支持virtual function的一个有效方案。 ​ C++对象模型：Nonstatic data members被配置于每一个class object之内，static data members则被存放在所有的class object之外，static 和Nonstatic function members也被存放在所有的class object 之外。virtual function则以两个步骤支持：1、每一个class产生一堆指向virtual function的指针，放在表格中，该表格称为virtual table；2、每一个class object被添加了一个指针，指向相关的virtual table。通常这个指针称为vptr，vptr的设定和重置都由每一个class的constructor、destructor和copy assignment运算符自动完成。每一个class所关联的type_info object也经由virtual table被指出了，通常被放在表格的第一个slot处。]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数据结构与算法学习之路--1、绪论]]></title>
     <url>%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF-1%E3%80%81%E7%BB%AA%E8%AE%BA.html</url>
     <content type="text"><![CDATA[该博客为数据结构与算法课程的学习笔记！ (a) 计算计算 = 信息处理：借助某种工具，遵照一定的规则，以明确而机械的方式进行。 计算模型 = 计算机 = 信息处理工具 算法： 即在特定的计算模型下，旨在解决特定问题的指令序列。 正确性：的确可以解决的问题。 确定性：任意算法都可以描述成一个由基本操作组成的序列。 可行性：每一基本操作都可以实现，且在常数时间内完成。 有穷性：对于任意输入，经有穷次基本操作都可以得到输出。 (b) 计算模型T(n) : 用算法A求解某一问题规模为n的实例所需的计算成本 T(n)=max [T(p)| |p|=n)]​ 亦即：在规模同为n的所有实例中，只关注最坏（成本最高）者。 T(n)=算法为解决规模为n的问题所需的基本操作次数。 (c) 大o记号 T(n) =o(f(n))f(n)相对于T(n)更加简洁，但依旧可以反映后者的增长趋势。f(n)常系数可以忽略，低次项可以忽略。 $o(1)$=任意常数: 此类算法效率最高，是对数据结构的基本操作，其代码一定满足以下： 一定不含循环 一定不含分支转向 一定不能有递归调用 对数复杂度$o(log n)$: 其值与常底数无关、与常数次幂无关，此类算法非常有效，复杂度无限接近常数。有序向量的二分查找 堆、词典的查询、插入与删除。 多项式复杂度$o(n^c)$：此类算法的效率通常认为已可令人满意。其中：线性复杂度o(n)属于努力的目标，如树图的遍历；平方复杂度存在于所有输入对象两两组合，如Dijkstra算法；立方复杂度不常见，如矩阵乘法。 ​ $o(n log^*n)$几乎接近线性,某些MST算法。 ​ $o(nlogn)$最常出现，但未必最优，排序，EU，Huffman算法。 指数复杂度$o(2^n)$:此类算法计算成本增长极快，通常被认为不可接受。最平凡的算法，需要尽可能的优化。 从$o(n^c)$到$o(2^n)$，是从有效算法到无效算法的分水岭。 对于绝大多数问题，并不存在算法！！！ (d)算法分析算法分析的主要任务分为：正确性（不变性x单调性） + 复杂度 C++等高级语言的基本指令均等效于常数条RAM的基本指令，在渐进意义下，二者大体相当。 复杂度分析的方法： ​ 迭代：级数求和 ​ 递归：递归跟踪+递推方程 ​ 猜测+验证 级数： 对于算术级数，复杂度与末项平方同阶：$T(n)=1+2+3+···+n=n(n+1)/2=o(n^2)$ 对于幂次级数，复杂度比幂次高出一阶：$T(n)=\sum k^n=\int k^ndn=o(k^(n+1))$ 对于几何级数（a&gt;1），复杂度与末项同阶：$T(n)=\sum_{i=0}^{i=n} a^i=o(a^n)$ (e)递归与迭代 数组求和之线性递归： 1234567int sum(int A[],int n) //计算数组中n个数的和&#123; if (n&lt;1)&#123; return 0;&#125; else &#123; return A[n-1]+sum(A,n-1); &#125; &#125; 数组求和之二分递归： 123456int sum(int A[],int a ,int b)&#123; if(a==b) return A[a]; int mid=(a+b)/2; return (sum(A,a,mid)+sum(A,mid+1,b));&#125; (f)局限RAM模型：常数代价准则、对数代价准则 循环移位： 12345void shift(int *A,int n,int k)&#123; reverse(A,k); reverse(A+k,n-k); reverse(A,n);&#125;]]></content>

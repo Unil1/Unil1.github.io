@@ -94,13 +94,20 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Unil&#39;s Blog">
-<meta property="og:url" content="http://www.unil.online/archives/2019/03/index.html">
+  <meta name="description" content="​    C++在布局以及存取时间上主要的额外负担是由virtual引起，包括：virtual function 和 virtual base class 1.1 c++对象模式​    C++中有两种类数据成员：static和nonstatic，以及三种类成员函数：static、nonstatic、virtual。 ​    简单对象模型：成员本身不存放在object中，只有指向成员的指针存放在">
+<meta name="keywords" content="C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度探索C++对象模型">
+<meta property="og:url" content="http://www.unil.online/深度探索C++对象模型.html">
 <meta property="og:site_name" content="Unil&#39;s Blog">
+<meta property="og:description" content="​    C++在布局以及存取时间上主要的额外负担是由virtual引起，包括：virtual function 和 virtual base class 1.1 c++对象模式​    C++中有两种类数据成员：static和nonstatic，以及三种类成员函数：static、nonstatic、virtual。 ​    简单对象模型：成员本身不存放在object中，只有指向成员的指针存放在">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.unil.online/D:/Myblog/source/_posts/深度探索C++对象模型/c++对象模型.jpg">
+<meta property="og:updated_time" content="2019-05-01T05:36:17.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unil&#39;s Blog">
+<meta name="twitter:title" content="深度探索C++对象模型">
+<meta name="twitter:description" content="​    C++在布局以及存取时间上主要的额外负担是由virtual引起，包括：virtual function 和 virtual base class 1.1 c++对象模式​    C++中有两种类数据成员：static和nonstatic，以及三种类成员函数：static、nonstatic、virtual。 ​    简单对象模型：成员本身不存放在object中，只有指向成员的指针存放在">
+<meta name="twitter:image" content="http://www.unil.online/D:/Myblog/source/_posts/深度探索C++对象模型/c++对象模型.jpg">
 
 
 
@@ -108,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://www.unil.online/archives/2019/03/"/>
+  <link rel="canonical" href="http://www.unil.online/深度探索C++对象模型"/>
 
 
 
@@ -118,7 +125,7 @@
   };
 </script>
 
-  <title>归档 | Unil's Blog</title>
+  <title>深度探索C++对象模型 | Unil's Blog</title>
   
 
 
@@ -166,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,7 +266,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -349,180 +356,274 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.unil.online/深度探索C++对象模型.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Unil"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/header.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Unil's Blog"/>
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">深度探索C++对象模型
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-01 13:16:25 / 修改时间：13:36:17" itemprop="dateCreated datePublished" datetime="2019-05-01T13:16:25+08:00">2019-05-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/QT框架下C++调用matlab混合编程.html" itemprop="url">
+          
             
-              <span itemprop="name">QT框架下C++调用matlab混合编程</span>
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-31T18:54:15+08:00"
-              content="2019-03-31">
-          03-31
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
+          
+            <div class="post-symbolscount">
+              
 
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">912</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/Hexo-Next主题配置.html" itemprop="url">
-            
-              <span itemprop="name">Hexo-Next主题配置</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-30T20:55:46+08:00"
-              content="2019-03-30">
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/Hexo-Github-page搭建个人博客.html" itemprop="url">
-            
-              <span itemprop="name">Hexo+Github Page搭建个人博客</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-30T18:53:41+08:00"
-              content="2019-03-30">
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>​    C++在布局以及存取时间上主要的额外负担是由virtual引起，包括：<code>virtual function</code> 和 <code>virtual base class</code></p>
+<h4 id="1-1-c-对象模式"><a href="#1-1-c-对象模式" class="headerlink" title="1.1 c++对象模式"></a>1.1 c++对象模式</h4><p>​    C++中有两种类数据成员：<code>static</code>和<code>nonstatic</code>，以及三种类成员函数：<code>static</code>、<code>nonstatic</code>、<code>virtual</code>。</p>
+<p>​    简单对象模型：成员本身不存放在object中，只有指向成员的指针存放在object中。object的成员是以slot的索引值来寻址。</p>
+<p>​    表格驱动模型：将所有与成员相关的信息抽象出来，放在一个data member table和一个member function table之中，class object本身则含有指向这两个表格的指针。member function table是一系列的slots，每个slot指出一个member function，data member table 则直接含有data本身。该模型并没有直接应用到编译器当中，但该观念却成为支持virtual function的一个有效方案。</p>
+<p>​    C++对象模型：<code>Nonstatic data members</code>被配置于每一个<code>class object</code>之内，<code>static data members</code>则被存放在所有的<code>class object</code>之外，<code>static</code> 和<code>Nonstatic function members</code>也被存放在所有的<code>class object</code> 之外。<code>virtual function</code>则以两个步骤支持：1、每一个<code>class</code>产生一堆指向<code>virtual function</code>的指针，放在表格中，该表格称为<code>virtual table</code>；2、每一个<code>class  object</code>被添加了一个指针，指向相关的<code>virtual table</code>。通常这个指针称为<code>vptr</code>，<code>vptr</code>的设定和重置都由每一个<code>class</code>的<code>constructor</code>、<code>destructor</code>和<code>copy assignment</code>运算符自动完成。每一个<code>class</code>所关联的<code>type_info object</code>也经由<code>virtual table</code>被指出了，通常被放在表格的第一个<code>slot</code>处。</p>
+<p><img src="/D:/Myblog\source\_posts\深度探索C++对象模型\c++对象模型.jpg" alt=""></p>
 
       
-
     </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>深度探索C++对象模型</a></p>
+  <p><span>文章作者:</span>Unil</a></p>
+  <p><span>发布时间:</span>2019年05月01日 - 13:16:25</p>
+  <p><span>最后更新:</span>2019年05月01日 - 13:36:17</p>
+  <p><span>原始链接:</span><a href="/深度探索C++对象模型.html" title="深度探索C++对象模型">http://www.unil.online/深度探索C++对象模型.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.unil.online/深度探索C++对象模型.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/数据结构与算法学习之路-1、绪论.html" rel="next" title="数据结构与算法学习之路--1、绪论">
+                <i class="fa fa-chevron-left"></i> 数据结构与算法学习之路--1、绪论
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -542,8 +643,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -704,6 +814,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-c-对象模式"><span class="nav-text">1.1 c++对象模式</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -918,6 +1045,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -933,6 +1064,8 @@
 
   
 
+
+  
 
 
   
@@ -1270,6 +1403,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

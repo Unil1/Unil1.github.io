@@ -94,13 +94,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Unil&#39;s Blog">
-<meta property="og:url" content="http://www.unil.online/categories/C/index.html">
+  <meta name="description" content="要查看具体是什么错误，请调用 GetLastError 函数：DWORD GetLastError();    它的作用很简单，就是返回由上一个函数调用设置的线程的 32 位错误代码。 一个Windows函数失败之后，应该马上调用GetLastError，因为假如又调用了另一个Windows函数，则此值很可能被改写。注意，成功调用的 Windows 函数可能用 ERROR_SUCCESS改写此值。">
+<meta name="keywords" content="Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 核心编程学习笔记">
+<meta property="og:url" content="http://www.unil.online/Windows-核心编程学习笔记.html">
 <meta property="og:site_name" content="Unil&#39;s Blog">
+<meta property="og:description" content="要查看具体是什么错误，请调用 GetLastError 函数：DWORD GetLastError();    它的作用很简单，就是返回由上一个函数调用设置的线程的 32 位错误代码。 一个Windows函数失败之后，应该马上调用GetLastError，因为假如又调用了另一个Windows函数，则此值很可能被改写。注意，成功调用的 Windows 函数可能用 ERROR_SUCCESS改写此值。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-10T02:04:39.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unil&#39;s Blog">
+<meta name="twitter:title" content="Windows 核心编程学习笔记">
+<meta name="twitter:description" content="要查看具体是什么错误，请调用 GetLastError 函数：DWORD GetLastError();    它的作用很简单，就是返回由上一个函数调用设置的线程的 32 位错误代码。 一个Windows函数失败之后，应该马上调用GetLastError，因为假如又调用了另一个Windows函数，则此值很可能被改写。注意，成功调用的 Windows 函数可能用 ERROR_SUCCESS改写此值。">
 
 
 
@@ -108,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://www.unil.online/categories/C/"/>
+  <link rel="canonical" href="http://www.unil.online/Windows-核心编程学习笔记"/>
 
 
 
@@ -118,7 +123,7 @@
   };
 </script>
 
-  <title>分类: C++ | Unil's Blog</title>
+  <title>Windows 核心编程学习笔记 | Unil's Blog</title>
   
 
 
@@ -166,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,7 +247,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -349,113 +354,287 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>C++<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.unil.online/Windows-核心编程学习笔记.html"/>
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Unil"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="/images/header.jpg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Unil's Blog"/>
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/C与C++字符串操作.html" itemprop="url">
-            
-              <span itemprop="name">C/C++字符串操作</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Windows 核心编程学习笔记
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-05-01T17:19:49+08:00"
-              content="2019-05-01">
-          05-01
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-10 09:48:45 / 修改时间：10:04:39" itemprop="dateCreated datePublished" datetime="2019-05-10T09:48:45+08:00">2019-05-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/深度探索C++对象模型.html" itemprop="url">
-            
-              <span itemprop="name">深度探索C++对象模型</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-05-01T13:16:25+08:00"
-              content="2019-05-01">
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>要查看具体是什么错误，请调用 GetLastError 函数：DWORD GetLastError();    它的作用很简单，就是返回由上一个函数调用设置的线程的 32 位错误代码。</p>
+<p>一个Windows函数失败之后，应该马上调用GetLastError，因为假如又调用了另一个Windows函数，则此值很可能被改写。注意，成功调用的 Windows 函数可能用 ERROR_SUCCESS改写此值。</p>
+<p>Windows 提供了一个函数，可以将错误代码转换为相应的文本描述。此函数名为 FormatMessage</p>
+<p>Windows之所以使用UTF-16，是因为全球各地使用的大部分语言中，每个字符很容易用一个16位值来表示。这样一来，应用程序很容易遍历字符串并计算出它的长度。但是，16位不足以表示某些语言的所有字符。对于这些语言，UTF-16支持使用代理（surrogates），后者是用32位（或者说4个字节）来表示一个字符的一种方式。由于只有少数应用程序需要表示这些语言中的字符，所以UTF-16在节省空间和简化编码这两个目标之间，提供了一个很好的折衷。注意，.NET Framework始终使用UTF-16来编码所有字符和字符串，所以在你自己的Windows应用程序中，如果需要在原生代码（native code）和托管代码（managed code）之间传递字符或字符串，使用UTF-16能改进性能和减少内存消耗。</p>
+<p>另外还有其他用于表示字符的UTF标准，具体如下。<br>​    UTF-8 UTF-8将一些字符编码为1个字节，一些字符编码为2个字节，一些字符编码为3个字节，一些字符编码为4个字节。值在0x0080以下的字符压缩为1个字节，这对美国使用的字符非常适合。0x0080和0x07FF之间的字符转换为2个字节，这对欧洲和中东地区的语言非常适用。0x0800以上的字符都转换为3个字节，适合东亚地区的语言。最后，代理对（surrogate pairs）被写为4个字节。UTF-8是一种相当流行的编码格式。但在对值为0x0800及以上的大量字符进行编码的时候，不如UTF-16高效。<br>​     UTF-32 UTF-32将每个字符都编码为4个字节。如果打算写一个简单的算法来遍历字符（任何语言中使用的字符），但又不想处理字节数不定的字符，这种编码方式就非常有用。例如，如果采用UTF-32编码方式，就不需要关心代理（surrogate）的问题，因为每个字符都是4个字符。显然，从内存使用这个角度来看，UTF-32 并不是一种高效的编码格式。因此，很少用它将字符串保存到文件或传送到网络。这种编码格式一般在应用程序内部使用。</p>
+<p>修改字符串算术问题。例如，函数经常希望你传给它缓冲区的字符数，而不是字节数。这意味着你应该传入_countof(szBuffer)，而不是sizeof(szBuffer)。而且，如果需要为一个字符串分配一个内存块，而且知道字符串中的字符数，那么记住内存是以字节来分配的。这意味着你必须调用malloc(nCharacters <em><br>sizeof(TCHAR))，而不是调用malloc(nCharacters)。在前面列出的所有基本准则中，这是最难记住的一条，而且如果出错，编译器不会提供任何警告或错误信息。所以，最好定义一个宏来避免犯错：#define chmalloc(nCharacters) (TCHAR</em>)malloc(nCharacters * sizeof(TCHAR)).</p>
+<p>始终使用安全的字符串处理函数，比如那些后缀为_s的，或者前缀为StringCch的。后者主要在你想明确控制截断的时候使用；如果不想明确控制截断，则首选前者。</p>
+<p>在我们的代码中，需要要比较两种字符串。其中，编程类的字符串包括文件名、路径、XML元素/属性以及注册表项/值等等。对于这些字符串，应使用CompareStringOrdinal来进行比较。因为它非常快，而且不会考虑用户的区域设置。这是完全合理的，因为不管程序在世界上的什么地方运行，这种字符串都是不变的。用户字符串则一般要在用户界面上显示。对于这些字符串，应使用CompareString(Ex)来比较，因为在比较字符串的时候，它会考虑用户的区域设置。</p>
+<p>由于内核对象的数据结构只能由内核访问，所以应用程序不能在内存中定位这些数据结构并直接更改其内容。Microsoft 有意强化了这个限制，确保内核对象结构保持一致性状态。正是因为有这个限制，所以 Microsoft 能自由地添加、删除或修改这些结构中的成员，同时不会干扰任何应用程序的正常运行。</p>
+<p>既然不能直接更改这些结构，应用程序如何操纵这些内核对象呢？答案是利用 Windows 提供的一组函数，以经过良好定义的方式来操纵这些结构。使用这些函数，始终可以访问这些内核对象。调用一个会创建内核对象的函数后，函数会返回一个句柄（handle），它标识了创建的对象。可以将这个句柄想象为一个不透明（opaque）的值，它可由进程中的任何线程使用。在 32 位 Windows 进程中，句柄是一个 32 位值；在 64 位 Windows 进程中，则是一个 64 位值。可将这个句柄传给各种 Windows 函数，告诉系统你想操纵哪一个内核对象。</p>
+<p>为了增强操作系统的可靠性，这些句柄值是与进程相关的</p>
+<p>内核对象的所有者是内核，而非进程</p>
+<p>要想判断一个对象是不是内核对象，最简单的方式是查看创建这个对象的函数。几乎所有创建内核对象的函数都有一个允许你指定安全属性信息的参数</p>
+<p>相反，用于创建 User 或 GDI 对象的函数都没有 PSECURITY_ATTRIBUTES 参数</p>
+<p>由于句柄值实际是作为进程句柄表的索引来使用的，所以这些句柄是相对于当前这个进程的，无法供其他进程使用。如果你真的在其他进程中使用它，那么实际引用的是那个进程的句柄表的同一个索引位置处的内核对象——只是索引值相同而已，你根本不知道它会指向什么对象。</p>
+<p>无论以什么方式创建内核对象，都要调用 CloseHandle 向系统指出你已经结束使用对象，如下所示：<br>BOOL CloseHandle(HANDLE hobject);</p>
+<p>就在 CloseHandle 函数返回之前，它会清除进程句柄表中的记录项——这个句柄现在对你的进程来说是无效的，不要再试图用它。无论内核对象当前是否销毁，这个清除过程都会发生！一旦调用 CloseHandle，你的进程就不能访问那个内核对象；但是，如果对象的使用计数没有递减至 0，它就不会被销毁。这是完全正常的；它表明另外还有一个或多个进程在使用该对象。当其他进程全部停止使用这个对象后（通过调用 CloseHandle），对象就会被销毁。通常，在创建一个内核对象时，我们会将它的句柄保存到一个变量中。将此变量作为参数调用了 CloseHandle 函数后，还应同时将这个变量设为 NULL</p>
+<p><strong>利用三种不同的机制来允许进程共享内核对象：使用对象句柄继承；为对象命名；以及复制对象句柄。</strong></p>
+<p>对象句柄的继承只会在生成子进程的时候发生。假如父进程后来又创建了新的内核对象，并同样将它们的句柄设为可继承的句柄。那么正在运行的子进程是不会继承这些新句柄的。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>Windows 核心编程学习笔记</a></p>
+  <p><span>文章作者:</span>Unil</a></p>
+  <p><span>发布时间:</span>2019年05月10日 - 09:48:45</p>
+  <p><span>最后更新:</span>2019年05月10日 - 10:04:39</p>
+  <p><span>原始链接:</span><a href="/Windows-核心编程学习笔记.html" title="Windows 核心编程学习笔记">http://www.unil.online/Windows-核心编程学习笔记.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.unil.online/Windows-核心编程学习笔记.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+      
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/C与C++字符串操作.html" rel="next" title="C/C++字符串操作">
+                <i class="fa fa-chevron-left"></i> C/C++字符串操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -855,6 +1034,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -870,6 +1053,8 @@
 
   
 
+
+  
 
 
   
@@ -1207,6 +1392,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
